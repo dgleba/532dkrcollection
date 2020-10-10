@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block heading %}Create / Update{% endblock %}
+
+{% block content %}
+    <form id="thing_form" method="post" action="." class="form">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{% endblock %}
+

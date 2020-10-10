@@ -1,0 +1,29 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+{% load crispy_forms_tags %}
+
+<p>
+    <a class="btn btn-light" href="{% url 'blogapp_Post_list' %}">
+    Post Listing
+    </a>
+</p>
+    
+
+
+<!-- http://alexopoulos7.blogspot.com/2016/11/django-forms-choice-tutorial-sample-code.html -->
+
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{form.errors}}
+
+  {{ form|crispy }}
+
+
+
+  <input type="submit" value="Save" class="btn btn-primary">
+</form>
+
+{% endblock %}

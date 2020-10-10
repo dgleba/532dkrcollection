@@ -1,0 +1,56 @@
+---
+project_name: djangoproj
+project_slug: "djangoproj"
+description: django site
+author_name: David Gleba
+domain_name: dj.local
+email: dgleba@gmail.com
+version: 0.1.0
+open_source_license:
+- MIT
+- BSD
+- GPLv3
+- Apache Software License 2.0
+- Not open source
+timezone: UTC
+windows: n
+use_pycharm: n
+use_docker: y
+postgresql_version:
+- '10.8'
+- '12.3'
+- '11.8'
+- '9.6'
+- '9.5'
+js_task_runner:
+- None
+- Gulp
+cloud_provider:
+- None
+- AWS
+- GCP
+mail_service:
+- Mailgun
+- Amazon SES
+- Mailjet
+- Mandrill
+- Postmark
+- Sendgrid
+- SendinBlue
+- SparkPost
+- Other SMTP
+use_async: n
+use_drf: n
+custom_bootstrap_compilation: n
+use_compressor: n
+use_celery: n
+use_mailhog: n
+use_sentry: n
+use_whitenoise: y
+use_heroku: n
+ci_tool:
+- None
+- Travis
+- Gitlab
+keep_local_envs_in_vcs: y
+debug: n

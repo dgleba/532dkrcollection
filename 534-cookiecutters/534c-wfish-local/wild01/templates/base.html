@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}{% endblock %}</title>
+
+        {% block extra_head %}
+        {% endblock %}
+    </head>
+    <body>
+        <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="{% url 'things:list' %}">List</a></li>
+            <li><a href="{% url 'things:create' %}">Create</a></li>
+        </ul>
+        <div class="container">
+            <h1>{% block heading %}{% endblock %}</h1>
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        {% block extra_script %}
+        {% endblock %}
+    </body>
+</html>
+

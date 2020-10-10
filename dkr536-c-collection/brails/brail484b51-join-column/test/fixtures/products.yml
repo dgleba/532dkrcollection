@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  pcolor: MyString
+  country_of_origin: one
+  pdate: 2019-10-15 20:56:20
+  active_status: 1
+  sort_order: 1
+
+two:
+  name: MyString
+  pcolor: MyString
+  country_of_origin: two
+  pdate: 2019-10-15 20:56:20
+  active_status: 1
+  sort_order: 1

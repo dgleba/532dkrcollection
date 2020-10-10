@@ -1,0 +1,24 @@
+
+<p>
+  <strong>Name:</strong>
+  <%= @product3.name %>
+</p>
+
+<p>
+  <strong>Pdate:</strong>
+  <%= @product3.pdate %>
+</p>
+
+<p>
+  <strong>Active status:</strong>
+  <%= @product3.active_status %>
+</p>
+
+<p>
+  <strong>Sort order:</strong>
+  <%= @product3.sort_order %>
+</p>
+
+<br>
+<%= link_to 'Edit', edit_product3_path(@product3), class: "btn btn-primary", :style=>'color:#FFFFFF;' %> &nbsp &nbsp
+<%= link_to 'Back', product3s_path, class: "btn btn-default" %>

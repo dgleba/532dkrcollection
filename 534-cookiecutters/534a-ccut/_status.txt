@@ -1,0 +1,39 @@
+
+works
+
+I may not want what is in this project.
+
+
+_____________
+
+
+
+goal:
+
+run cookiecutter
+
+_____________
+
+
+
+ran pydanny.
+
+
+# One
+
+https://github.com/pydanny/cookiecutter-django
+
+
+https://buildmedia.readthedocs.org/media/pdf/cookiecutter/latest/cookiecutter.pdf
+
+
+worked:
+
+    docker-compose run --rm djdev cookiecutter https://github.com/pydanny/cookiecutter-django --config-file /ccut/ccut.yml
+
+
+didn't work...
+
+    docker-compose run --rm djdev cookiecutter https://github.com/pydanny/cookiecutter-django --default-config
+
+

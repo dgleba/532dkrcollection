@@ -1,0 +1,5 @@
+Django>=2,<3
+django-extensions
+djangorestframework
+django-crispy-forms
+django-select2

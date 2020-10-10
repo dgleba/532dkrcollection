@@ -1,0 +1,23 @@
+
+
+# django>=2.2,<3.0
+django<2
+
+python-dotenv==0.10.3
+
+django-extensions
+
+django-pipeline
+jsmin
+csscompressor
+
+npm
+
+mysqlclient
+django-mysql<3
+
+stripe
+
+django-shortuuidfield
+
+dj_static

@@ -1,0 +1,8 @@
+
+Naming
+
+the folder app533 here holds the django app code.
+
+It needs a unique name as docker compose uses the folder name to name the containers.
+
+A unique name will make using and maintaining the app easier.

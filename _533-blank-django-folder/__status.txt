@@ -1,0 +1,8 @@
+
+status:  
+
+has not been tested
+
+goal:
+
+this blank django app

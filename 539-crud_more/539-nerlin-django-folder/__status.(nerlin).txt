@@ -1,0 +1,58 @@
+_____________
+
+
+status:  
+
+
+
+some success.
+
+it runs.
+list shows up.
+
+
+but 
+
+djdev_1     | [10/Oct/2020 02:02:29] "GET /products/create HTTP/1.1" 301 0
+djdev_1     | Forbidden (Permission denied): /products/create/
+
+
+
+_____________
+
+
+goal:
+
+make django full starter/example 
+
+use
+
+	url = https://github.com/Nerlin/django-products-example.git
+
+_____________
+
+
+
+=================================================
+
+_____________
+
+
+
+ dc run --rm djdev  python3 manage.py makemigrations
+
+dc run --rm djdev  python3 manage.py migrate
+
+dc run --rm djdev  python3 manage.py migrate crud
+
+
+ dc up
+
+ 9. Login to http://127.0.0.1:8000
+
+ dc run --rm djdev  python manage.py createsuperuser 
+    (enter username, email, password)
+
+
+_____________
+

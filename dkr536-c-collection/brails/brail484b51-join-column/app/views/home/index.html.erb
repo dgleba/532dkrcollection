@@ -1,0 +1,59 @@
+<% if user_signed_in? %> 
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>         
+<% else %> 
+  <%= link_to('Login', new_user_session_path)  %>
+<%end %>  
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+
+<h3> 1.   </h3>
+<%= link_to 'Products', products_path, class: "btn btn-primary", :style=>'color:#FFFFFF;' %>
+<h3> 2.   </h3>
+
+<%# This is a comment! %>
+<%#  <%= link_to 'Rails admin', rails_admin.index_path('') %>
+
+Use /radmin to access the rails admin tool if it is setup.
+
+<h3> 3.   </h3>
+
+<%# this not working.. = link_to(:url =>"http://#{request.host}/pfeatures", :text => 'Pfeatures list') %>
+<%# = link_to(:url =>"http://localhost:3001/pfeatures", :text => "pfeatures list") %>
+
+<%= link_to 'Pfeatures', pfeatures_path, class: "btn btn-primary", :style=>'color:#FFFFFF;' %>
+<br>
+<br>
+<%= link_to 'Country of Origin list', country_of_origins_path, class: "btn btn-primary", :style=>'color:#FFFFFF;' %>
+<p>This has attachments</p>
+<br>
+<br>
+<%= link_to 'Product_features join table', product_features_path, class: "btn btn-primary", :style=>'color:#FFFFFF;' %>
+<br>
+<br>
+
+<hr>
+<%= Rails.env %>
+
+
+<br><br><br>
+<hr>
+
+JWT
+<br>
+# Add the following code to a view
+<br>
+# It will show you an example of how to make a
+<br>
+# curl HTTP request with the proper authentication headers.
+<br>
+# Be sure to actually use a working route and not "http://localhost:3001/products.json"
+<br>
+<br>
+
+<% if user_signed_in? %>
+  curl -i -X  GET --header 'Authorization: Bearer <%= JWTWrapper.encode({ user_id: current_user.id }) %>' 'http://localhost:3001/products.json'
+<% end %>
+
+<br><br><br>
+<hr>
+

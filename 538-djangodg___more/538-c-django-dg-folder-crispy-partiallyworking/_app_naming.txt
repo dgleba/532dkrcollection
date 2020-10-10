@@ -1,0 +1,14 @@
+
+Naming
+
+
+1.
+
+the folder `538b-django-docker` here holds the docker project. It has the docker-compose.yml file.
+    In this case it has a django app and a adminer for sqlite docker setup
+It needs a unique name as docker compose uses the folder name to name the containers.
+ A unique name will make using and maintaining the app easier.
+
+2.
+give your folder a unique name that fits your project.
+

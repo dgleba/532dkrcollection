@@ -1,0 +1,50 @@
+
+status:  
+
+
+
+
+
+_____________
+
+
+goal:
+
+make django full starter/example 
+
+use
+
+
+https://github.com/gdegirmenci/django-bookshelf
+
+
+ggl:  django crud bootstrap github
+
+
+_____________
+
+
+
+=================================================
+
+_____________
+
+
+
+ dc run --rm djdev  python manage.py makemigrations
+
+dc run --rm djdev  python manage.py migrate
+
+dc run --rm djdev  python manage.py migrate crud
+
+
+ dc run --rm djdev  python manage.py runserver
+
+ 9. Login to http://127.0.0.1:8000
+
+ dc run --rm djdev  python manage.py createsuperuser 
+    (enter username, email, password)
+
+
+_____________
+

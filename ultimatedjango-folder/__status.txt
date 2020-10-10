@@ -1,0 +1,17 @@
+
+status:
+
+Can't run it.
+
+
+_____________
+
+
+goal:
+
+run the app from.. 
+https://ultimatedjango.com/learn-django/chapters/
+
+_____________
+
+

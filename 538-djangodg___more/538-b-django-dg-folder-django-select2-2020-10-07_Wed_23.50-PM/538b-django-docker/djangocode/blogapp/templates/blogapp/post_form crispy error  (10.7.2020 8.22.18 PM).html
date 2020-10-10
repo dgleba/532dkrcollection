@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+{% crispy post_form post_form.helper %}
+
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'blogapp_Post_list' %}">
+    Post Listing
+    </a>
+</p>
+    
+
+
+<!-- 
+  error:
+  TypeError: __init__() got an unexpected keyword argument 'instance'
+djdev_1     | [08/Oct/2020 00:17:45] "GET /blogapp/blogapp/Post/create/ HTTP/1.1" 500 88801 -->
+
+
+<form method="post">
+  {% csrf_token %}
+  
+  <!-- https://simpleisbetterthancomplex.com/tutorial/2018/11/28/advanced-form-rendering-with-django-crispy-forms.html -->
+  <div class="form-group row">
+  {{ form.body|as_crispy_field }}
+  </div>
+
+
+  <input type="submit" value="Save" class="btn btn-primary">
+</form>
+
+{% endblock %}
+
+
+

@@ -1,0 +1,63 @@
+
+status:  
+
+
+1.
+
+partial.
+
+can use {{form}} but not bootstrap html yet.
+
+runs, but there are problems.
+see https://github.com/mmcardle/django_builder/issues
+
+
+2.
+
+crispy forms.
+
+I can do a {{ form|crispy }} ok.
+
+I had trouble doing as_crispy_field.
+
+I should try the repo at the bottom of this article.
+
+https://simpleisbetterthancomplex.com/tutorial/2018/11/28/advanced-form-rendering-with-django-crispy-forms.html
+
+I can't find many tutorials that show custom layout/html/template usage with crispy
+
+I saw a tutorial youtube that said it was about not using templates, but doing the layout in forms.py
+
+
+3.
+django-select2
+
+works, but not like it should with search box clearly shown.
+
+
+_____________
+
+
+goal:
+
+make crud app - djangobuilder.io,  and then add select from foreign model
+
+https://djangobuilder.io/#/project/5mJ3tT7vhxC82xdFR2iY
+
+https://github.com/mmcardle/django_builder/issues
+
+
+_____________
+
+more..
+
+see
+
+https://github.com/mmcardle/django_builder/issues/99
+https://github.com/mmcardle/django_builder/issues/100
+https://github.com/mmcardle/django_builder/issues/104
+https://github.com/mmcardle/django_builder/issues/105
+https://github.com/mmcardle/django_builder/issues/106
+https://github.com/mmcardle/django_builder/issues/107
+
+

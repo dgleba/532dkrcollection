@@ -1,0 +1,11 @@
+
+status:  
+
+
+
+
+goal:
+
+try https://github.com/modocache/django-generate-scaffold
+
+

@@ -1,0 +1,12 @@
+
+status:  
+
+works
+
+followed tutorial
+https://django-tables2.readthedocs.io/en/latest/pages/tutorial.html
+
+
+goal:
+
+make app with django-tables2 etc.

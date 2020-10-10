@@ -1,0 +1,50 @@
+# Configuration for local development
+#
+# See README for setup and usage instructions
+#
+version: '3.6'
+
+services:
+
+  # postgres:
+  #   image: postgres:${DOCKER_POSTGRES_VERSION:-13.0-alpine}
+  #   ports:
+  #     - "5434:5433"
+  #     - "5432:5432"
+  #   volumes:
+  #     - "${DOCKER_POSTGRES_DATA:-../sysdata/wild01db}:/db"
+  #     # just so i can change ther perms and delete it.
+  #     # - "./wild01-db:/db01"
+  #     - ".:/project"
+  #   environment:
+  #     DOCKER_POSTGRES_DATA: ../sysdata/wild01db
+  #     DOCKER_POSTGRES_VERSION: 11.1-alpine
+  #     POSTGRES_DB: wild01
+  #     POSTGRES_USER: wild01
+  #     POSTGRES_PASSWORD: wild01
+  #     PGDATA: /db
+  #   # command: bash -c "" 
+
+  # redis:
+  #   image: redis:${DOCKER_REDIS_VERSION:-latest}
+  #   ports:
+  #     - "6379:6379"
+
+  django:
+    build:
+      context: ./
+      dockerfile: "./dev-docker/django/Dockerfile"
+    environment:
+      DJANGO_CONFIGURATION: DevDocker
+      DATABASE_HOST: postgres
+      DATABASE_NAME: wild01
+      DATABASE_USER: wild01
+      DATABASE_PASSWORD: wild01
+      DJANGO_REDIS_HOST: redis
+    ports:
+      - "8008:8000"
+    volumes:
+      - ".:/project"
+    # depends_on:
+    #   - postgres
+    #   - redis
