@@ -4,7 +4,8 @@ from django.db import models
 
 # import django.urls to set absolute URL
 from django.urls import reverse
-
+from django.conf import settings
+from django.db import models
 
 class Blog(models.Model):
     title = models.CharField(max_length=200)
@@ -14,7 +15,7 @@ class Blog(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
     updated_at = models.DateTimeField(auto_now=True, editable=False)
 
-    book = models.ForeignKey("blog.Book", on_delete=models.CASCADE)
+    book = models.ForeignKey("Book", on_delete=models.CASCADE)
 
     # Inspect Blog object via name
     def __str__(self):
@@ -35,7 +36,8 @@ class Book(models.Model):
 
     # Inspect Book object via name
     def __str__(self):
-        return self.name
+        # return (self.name, self.author)
+         return '%s %s %s' % (self.name, self.author, self.publisher)
 
     # Inspect absolute Book object's URL
     def get_absolute_url(self):

@@ -3,10 +3,10 @@ This is an example project starter app.
 
 It should have 
  - crud pages
+ - select2 widget
 
 To be added..
 
- - select2 widget
  - search
  - sign up by email, password reset by email.
  - login, roles based access

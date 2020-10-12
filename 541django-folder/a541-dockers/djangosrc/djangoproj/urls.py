@@ -29,13 +29,19 @@ from blog import views
 # ]
 
 urlpatterns = [
+    # for select2
+    path("blog/create", views.BlogCreate.as_view(), name="blog-create"),
+    path("select2/", include("django_select2.urls")),
+
     path('admin/', admin.site.urls),
     # url(r'^admin/', admin.site.urls),
+
     # Make Book App as Root
     # url(r'^', include('book.urls')),
-    path('book/', include('book.urls')),
+    path('book1/', include('book1.urls')),
+    
     path('blog/', include('blog.urls')),
+
     path('book-app/', include('book-app.urls')),
-    path("select2/", include("django_select2.urls")),
-    path("blog/create", views.BlogCreate.as_view(), name="blog-create"),
+
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

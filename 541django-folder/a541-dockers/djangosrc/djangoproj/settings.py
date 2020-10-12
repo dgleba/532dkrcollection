@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'rest_framework',
     'django_select2',
-    'book',
+    'book1',
     'blog',
     'book-app',
 ]
@@ -125,9 +125,14 @@ USE_TZ = True
 
 CACHES = {
     # … default cache config and others
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://192.168.88.60:6379//1",
+        "OPTIONS": {"CLIENT_CLASS": "django_redis.client.DefaultClient"},
+    },    
     "select2": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://redis1:6379/2",
+        "LOCATION": "redis://192.168.88.60:6379/2",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }

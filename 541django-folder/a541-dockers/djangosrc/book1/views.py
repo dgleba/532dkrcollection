@@ -11,10 +11,10 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
 # Import Book Model
-from book.models import Book
+from book1.models import Book
 
 # Import Book Form
-from book.forms import BookForm
+from book1.forms import BookForm
 
 # List View
 class BookList(ListView):

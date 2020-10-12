@@ -12,6 +12,7 @@ class BookWidget(s2forms.ModelSelect2Widget):
     search_fields = [
         "name__icontains",
         "author__icontains",
+        "publisher__icontains",
     ]
 
 
