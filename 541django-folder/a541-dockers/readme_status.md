@@ -5,8 +5,10 @@ It should have
  - crud pages
  - select2 widget
 
+
 To be added..
 
+ - 
  - search
  - sign up by email, password reset by email.
  - login, roles based access
