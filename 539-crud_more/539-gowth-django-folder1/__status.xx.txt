@@ -1,0 +1,105 @@
+x
+
+status:  
+
+
+
+MultiValueDictKeyError at /edit/update/3 'location'
+
+
+
+_____________
+
+
+goal:
+
+make django full starter/example 
+
+use
+
+git clone https://github.com/gowthamand/django-crud-ajax-login-register-fileupload.git
+
+
+
+_____________
+
+
+
+=================================================
+
+_____________
+
+
+
+ dc run --rm djdev  python3 manage.py makemigrations
+
+dc run --rm djdev  python3 manage.py migrate
+
+dc run --rm djdev  python3 manage.py migrate crud
+
+ # dc run --rm djdev . python3 manage.py migrate
+
+ dc run --rm djdev  python3 manage.py runserver
+
+ 9. Login to http://127.0.0.1:8000
+
+ dc run --rm djdev  python manage.py createsuperuser 
+    (enter username, email, password)
+
+
+_____________
+
+
+errors
+
+
+
+I commented out some lines in requirements.txt
+
+example error.
+
+
+  Downloading zope.interface-4.3.2.tar.gz (143 kB)
+    ERROR: Command errored out with exit status 1:
+     command: /usr/local/bin/python -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-5wb7kyrx/zope-interface/setup.py'"'"'; __file__='"'"'/tmp/pip-install-5wb7kyrx/zope-interface/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base /tmp/pip-pip-egg-info-49co2b66
+         cwd: /tmp/pip-install-5wb7kyrx/zope-interface/
+    Complete output (5 lines):
+    Traceback (most recent call last):
+      File "<string>", line 1, in <module>
+      File "/tmp/pip-install-5wb7kyrx/zope-interface/setup.py", line 26, in <module>
+        from setuptools import setup, Extension, Feature
+    ImportError: cannot import name 'Feature' from 'setuptools' (/usr/local/lib/python3.7/site-packages/setuptools/__init__.py)
+    ----------------------------------------
+ERROR: Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+WARNING: You are using pip version 20.2.2; however, version 20.2.3 is available.
+You should consider upgrading via the '/usr/local/bin/python -m pip install --upgrade pip' command.
+ERROR: Service 'djdev' failed to build: The command '/bin/sh -c pip install  -r requirements.txt' returned a non-zero code: 1
+albe@vamp398:/srv/dkr/532dkrcollection/539-gowth-django-folder/539gowth-djangodocker$
+
+
+
+
+_____________
+
+MultiValueDictKeyError at /edit/update/3
+'location'
+Request Method:	POST
+Request URL:	http://192.168.88.60:6465/edit/update/3
+Django Version:	3.0.1
+Exception Type:	MultiValueDictKeyError
+Exception Value:	
+'location'
+Exception Location:	/usr/local/lib/python3.8/site-packages/django/utils/datastructures.py in __getitem__, line 78
+Python Executable:	/usr/local/bin/python
+Python Version:	3.8.6
+Python Path:	
+['/code',
+ '/usr/local/lib/python38.zip',
+ '/usr/local/lib/python3.8',
+ '/usr/local/lib/python3.8/lib-dynload',
+ '/usr/local/lib/python3.8/site-packages']
+Server time:	Sat, 10 Oct 2020 04:11:02 +0530
+_____________
+
+_____________
+
