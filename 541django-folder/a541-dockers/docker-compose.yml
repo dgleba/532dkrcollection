@@ -1,7 +1,7 @@
 version: "3.6"
 services:
   djdev:
-    build: ./appdj
+    build: ./djangosrc
     restart: on-failure
     working_dir: /code
     # set user to root, group to www-data. All files should be delete-able by www-data group.
@@ -11,10 +11,10 @@ services:
       - ./.env
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - ./appdj:/code
+      - ./djangosrc:/code
       # use pip cache to reduce startup time..
       # https://stackoverflow.com/questions/25305788/how-to-avoid-reinstalling-packages-when-building-docker-image-for-python-project
-      - ../datasys/python-dot-cache/pip/:/root/.cache/pip
+      - ~/sysdata/python-dot-cache/pip/:/root/.cache/pip
     ports:
       - "6461:8000"
     networks:
@@ -27,10 +27,10 @@ services:
     build: ./adminer-sqlite
     restart: always
     ports:
-      - 14123:80
+      - 14124:80
       # 8080 for regular adminer, 80 for dockette
     volumes:
-      - ./appdj/db.sqlite3:/db.sq3
+      - ./djangosrc/db.sqlite3:/db.sq3
       - ./adminer-sqlite:/var/www/html
     environment:
       - ADMINER_DEFAULT_SERVER=s
@@ -39,6 +39,10 @@ services:
       - DB_PASS=a
       # - ADMINER_PLUGINS='tables-filter'
 
+  redis1:
+    image: redis:${DOCKER_REDIS_VERSION:-latest}
+    ports:
+      - "6379:6379"
 
 networks:
   499d-django_default:

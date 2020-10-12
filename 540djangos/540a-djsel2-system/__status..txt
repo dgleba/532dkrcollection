@@ -1,0 +1,78 @@
+
+status:  
+
+
+works.  what a struggle.
+
+_____________
+
+
+goal:
+
+try dj sel 2 package
+
+use
+
+git clone https://github.com/applegrew/django-select2.git
+
+
+run the example as they provide it.
+
+
+_____________
+
+
+
+=================================================
+
+
+_____________
+
+
+https://medium.com/@moreless/install-python-3-6-on-ubuntu-16-04-28791d5c2167
+
+
+albe@vamp398:
+
+        cd /srv/dkr/532dkrcollection/540djangos/540a-djsel2-system/540e/d540django-select2/example
+
+
+git clone https://github.com/codingjoe/django-select2.git
+cd django-select2/example
+
+python3.6 -m pip install -r requirements.txt
+
+python3.6 manage.py migrate
+
+python3.6 manage.py createsuperuser
+
+# follow the instructions to create a superuser
+
+python3.6 manage.py runserver 0.0.0.0:8000
+
+# follow the instructions and open your browser
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+odd behaviour, let it sit idle for a while, error,  but works on reload.
+
+
+error,
+
+Not Found: /select2/fields/auto.json
+[11/Oct/2020 14:00:49] "GET /select2/fields/auto.json?field_id=IjhmNjYyMTBmLTY4YWItNDY3OC1iNGZmLTQzNWM3NjgyODg5ZSI%3A1kRbPI%3A71R8es9aTuPwyD0sPRyJeQ3gLvnqo7puBQtJQCyMCjk HTTP/1.1" 404 1880
+
+
+reload and it works.
+
+[11/Oct/2020 14:03:18] "GET / HTTP/1.1" 200 1643
+/home/albe/.local/lib/python3.6/site-packages/django/views/generic/list.py:88: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'django.contrib.auth.models.User'> QuerySet.
+  allow_empty_first_page=allow_empty_first_page, **kwargs)
+[11/Oct/2020 14:03:19] "GET /select2/fields/auto.json?field_id=ImJhMmViMDEyLWI4NWQtNGJiYi1iODg2LWU3MzIyZDRmMDZlNCI%3A1kRbwR%3AGLVhSz03F6TQ7u80-mH5sup91NoIKtpz_Yy4LqfQSq8 HTTP/1.1" 200 123
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+

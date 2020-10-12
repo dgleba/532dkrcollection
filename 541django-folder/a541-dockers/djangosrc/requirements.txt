@@ -1,0 +1,7 @@
+
+django>=2.2,<3.0
+python-dotenv
+django-extensions
+djangorestframework
+django-select2
+django-redis
