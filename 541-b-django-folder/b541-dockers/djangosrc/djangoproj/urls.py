@@ -46,4 +46,7 @@ urlpatterns = [
 
     path('book-app/', include('book-app.urls')),
 
+    path('', lambda request: render(request, 'homepage.html'))
+
+
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
