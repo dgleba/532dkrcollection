@@ -1,0 +1,11 @@
+# django>=2.2,<3.0
+django>=3
+python-dotenv
+django-extensions
+djangorestframework
+django-select2
+django-redis
+django-tables2
+django-filter
+django-bootstrap4
+django-widget-tweaks

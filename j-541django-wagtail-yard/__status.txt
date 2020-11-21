@@ -1,0 +1,20 @@
+
+status:  
+
+
+
+
+_____________
+
+
+goal:
+
+wagtail
+
+
+_____________
+
+
+
+	docker-compose exec djdev bash -c ' mkdir mysite; wagtail start mysite mysite'
+
