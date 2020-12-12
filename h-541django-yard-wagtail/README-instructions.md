@@ -31,6 +31,7 @@ Look at the make file for useful commands to speed up using the system.
 
 eg: make clean - this will clean up unneeded containers and such.
 
+make perm   -   to set write permissions on code files.
 
 
 # commands - for Development
