@@ -1,8 +1,26 @@
 
 status:  
 
-has not been tested
+works.
 
 goal:
 
-this blank django app
+this is example django app
+
+
+=================================================
+
+
+http://192.168.88.60:6461/ front views work.
+
+http://192.168.88.60:6461/admin/ works. can login. 
+
+http://192.168.88.60:6461/blogapp/api/v1/ works.
+
+before jwt.
+
+http://192.168.88.60:6461/blogapp/api/v1/Post/ shows post list. when logged into session.
+
+
+2020-12-13_Sun_09.36-AM works.
+
