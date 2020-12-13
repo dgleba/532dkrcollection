@@ -48,17 +48,20 @@ These have already been run against this project..
   
   # This can work with sqlite in development. See production below for use with mysql.
 
-    docker-compose run --rm djdev python manage.py makemigrations
+    docker-compose run --rm djdev python manage.py makemigrations blogapp
 
-    docker-compose run --rm djdev python manage.py migrate
+    docker-compose run --rm djdev python manage.py migrate 
 
-    docker-compose run --rm djdev python manage.py createsuperuser
+    docker-compose run --rm djdev python manage.py createsuperuser --username cc  --email=c@a.com
+
+    docker-compose run --rm djdev python manage.py createsuperuser --email=b@a.com
     
     or
 
     # see .env file for env var..
     # echo DJANGO_SUPERUSER_PASSWORD=a>>.env
-    docker-compose run --rm djdev python manage.py createsuperuser --noinput --username a --email=a@a.com 
+    # 2020-12-11: I had trouble that this didn't pick up password from .env.
+    docker-compose run --rm djdev python manage.py createsuperuser --noinput --username aa --email=a@a.com 
     <!-- docker-compose run --rm djdev python manage.py createsuperuser --noinput --username admin --email=ad@a.com  -->
 
 
