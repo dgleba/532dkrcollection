@@ -82,3 +82,9 @@ X-Frame-Options: SAMEORIGIN
 
 
 
+=================================================
+
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication
+
+https://github.com/mdn/django-locallibrary-tutorial
+
