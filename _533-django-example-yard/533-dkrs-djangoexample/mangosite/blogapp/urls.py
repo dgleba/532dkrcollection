@@ -14,4 +14,5 @@ urlpatterns = (
     path("blogapp/Post/create/", views.PostCreateView.as_view(), name="blogapp_Post_create"),
     path("blogapp/Post/detail/<int:pk>/", views.PostDetailView.as_view(), name="blogapp_Post_detail"),
     path("blogapp/Post/update/<int:pk>/", views.PostUpdateView.as_view(), name="blogapp_Post_update"),
+    path('hello/', views.HelloView.as_view(), name='hello'),
 )
