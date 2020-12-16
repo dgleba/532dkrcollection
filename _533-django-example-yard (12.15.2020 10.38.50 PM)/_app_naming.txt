@@ -1,0 +1,13 @@
+
+Naming
+
+
+1.
+
+the folder `533-dkrs-djangotemplate` here holds the dkr project.
+It needs a unique name as docker compose uses the folder name to name the containers.
+A unique name will make using and maintaining the app easier.
+
+2.
+give your folder a unique name that fits your project.
+

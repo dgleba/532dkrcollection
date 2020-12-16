@@ -52,7 +52,7 @@ These have already been run against this project..
 
     docker-compose run --rm djdev python manage.py migrate 
 
-    docker-compose run --rm djdev python manage.py createsuperuser --username aa  --email=a@a.com
+    docker-compose run --rm djdev python manage.py createsuperuser --username cc  --email=c@a.com
 
     docker-compose run --rm djdev python manage.py createsuperuser --email=b@a.com
     
