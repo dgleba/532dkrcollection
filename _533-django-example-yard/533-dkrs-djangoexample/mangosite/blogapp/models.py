@@ -1,6 +1,10 @@
 from django.db import models
 from django.urls import reverse
 
+from django.conf import settings
+from django.db import models
+import rules
+
 
 class Post(models.Model):
 
@@ -21,3 +25,14 @@ class Post(models.Model):
 
     def get_update_url(self):
         return reverse("blogapp_Post_update", args=(self.pk,))
+
+if sys.version_info.major >= 3:
+    from rules.contrib.models import RulesModel
+
+    class TestModel(RulesModel):
+        class Meta:
+            rules_permissions = {"add": rules.always_true, "view": rules.always_true}
+
+        @classmethod
+        def preprocess_rules_permissions(cls, perms):
+            perms["custom"] = rules.always_true

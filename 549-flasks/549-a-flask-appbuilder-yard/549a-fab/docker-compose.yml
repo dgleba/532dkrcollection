@@ -1,0 +1,55 @@
+version: "3.6"
+
+services:
+
+  flaskdev:
+    build: ./demo1
+    restart: on-failure
+    working_dir: /code
+    # set user to root, group to www-data. All files should be delete-able by www-data group.
+    # problem is that they are read only for group www-data. Use make perm to make them writable.
+    user: "0:33"
+    env_file:
+      - ./.env
+    command: bash -c ' export FLASK_APP=app;  flask run  --host 0.0.0.0'
+    volumes:
+      - ./demo1:/code
+      # use pip cache to reduce startup time..
+      # https://stackoverflow.com/questions/25305788/how-to-avoid-reinstalling-packages-when-building-docker-image-for-python-project
+      - ../datasys/python-dot-cache/pip/:/root/.cache/pip
+    ports:
+      - "14224:5000"
+    networks:
+      - 548-flask_default      
+  
+  adminerd:
+    # 10.4.1.231:6117/
+    # image: adminer:4.7
+    # image: dockette/adminer:full
+    # image: dgleba/adminer-sqlite:one
+    build: ./adminer-sqlite
+    restart: always
+    ports:
+      - 14225:80
+      # 8080 for regular adminer, 80 for dockette
+    volumes:
+      - ./demo1/app.db:/db.sq3
+      - ./adminer-sqlite:/var/www/html
+    environment:
+      - ADMINER_DEFAULT_SERVER=s
+      - DB_PATH=/db.sq3
+      - DB_USER=user
+      - DB_PASS=apass
+      # - ADMINER_PLUGINS='tables-filter'
+
+
+# for redis, see django-select2 example.. https://github.com/codingjoe/django-select2/tree/master/example
+      # and  https://github.com/wildfish/wildfish-django-starter/blob/master/%7B%7Bcookiecutter.project_name%7D%7D/dev-docker-compose.yml.default
+
+
+networks:
+  548-flask_default:
+    name: 548-flask_default
+
+
+
