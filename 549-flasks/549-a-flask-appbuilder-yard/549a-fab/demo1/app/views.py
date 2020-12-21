@@ -6,7 +6,7 @@ from flask_appbuilder.models.group import aggregate_count
 from flask_appbuilder.models.sqla.interface import SQLAInterface
 
 from . import appbuilder, db
-from .models import Contact, ContactGroup, Gender
+from .models import Contact, ContactGroup, Gender, Pfeature
 
 
 def fill_gender():
@@ -77,6 +77,9 @@ class GroupModelView(ModelView):
     datamodel = SQLAInterface(ContactGroup)
     related_views = [ContactModelView]
 
+class PfeatureView(ModelView):
+    datamodel = SQLAInterface(Pfeature)
+    add_columns = ['name', 'active_status']
 
 def pretty_month_year(value):
     return calendar.month_name[value.month] + " " + str(value.year)
@@ -108,6 +111,15 @@ class ContactTimeChartView(GroupByChartView):
 
 db.create_all()
 fill_gender()
+
+appbuilder.add_view(
+    PfeatureView, "Features", icon="fa-envelope", category="Feature"
+)
+
+appbuilder.add_view(
+    ContactModelView, "List Contacts", icon="fa-envelope", category="Contacts"
+)
+
 appbuilder.add_view(
     GroupModelView,
     "List Groups",
@@ -115,10 +127,9 @@ appbuilder.add_view(
     category="Contacts",
     category_icon="fa-envelope",
 )
-appbuilder.add_view(
-    ContactModelView, "List Contacts", icon="fa-envelope", category="Contacts"
-)
+
 appbuilder.add_separator("Contacts")
+
 appbuilder.add_view(
     ContactTimeChartView,
     "Contacts Birth Chart",

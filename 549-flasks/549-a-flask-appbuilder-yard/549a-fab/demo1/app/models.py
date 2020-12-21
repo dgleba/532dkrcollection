@@ -1,8 +1,9 @@
 import datetime
 
 from flask_appbuilder import Model
-from sqlalchemy import Column, Date, ForeignKey, Integer, String
+from sqlalchemy import Column, Date, ForeignKey, Integer, String, DateTime
 from sqlalchemy.orm import relationship
+from sqlalchemy.sql import func
 
 mindate = datetime.date(datetime.MINYEAR, 1, 1)
 
@@ -18,6 +19,19 @@ class ContactGroup(Model):
 class Gender(Model):
     id = Column(Integer, primary_key=True)
     name = Column(String(50), unique=True, nullable=False)
+
+    def __repr__(self):
+        return self.name
+
+
+class Pfeature(Model):
+    id = Column(Integer, primary_key=True)
+    name = Column(String(250), unique=True, nullable=False)
+    fdate = Column(Date, nullable=True)
+    active_status = Column(Integer,  nullable=True)
+    sort_order = Column(Integer,  nullable=True)
+    created_at = Column(DateTime(timezone=True), default=func.now())
+    updated_at = Column(DateTime(timezone=True), onupdate=func.now())
 
     def __repr__(self):
         return self.name
@@ -45,3 +59,4 @@ class Contact(Model):
     def year(self):
         date = self.birthday or mindate
         return datetime.datetime(date.year, 1, 1)
+

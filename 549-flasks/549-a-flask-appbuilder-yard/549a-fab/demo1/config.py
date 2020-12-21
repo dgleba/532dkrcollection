@@ -35,6 +35,8 @@ LANGUAGES = {
     "ja_JP": {"flag": "jp", "name": "Japanese"},
 }
 
+FAB_API_SWAGGER_UI = True
+
 FAB_API_MAX_PAGE_SIZE = 100
 # ------------------------------
 # GLOBALS FOR GENERAL APP's
@@ -71,6 +73,12 @@ FAB_ROLES = {
        [".*", "can_list"],
        [".*", "can_show"],
        [".*", "menu_access"]
+   ],
+   "RegularUser": [
+       [".*", "can_list"],
+       [".*", "can_show"],
+       [".*", "menu_access"],
+       ["Contact", "can_add", "can_edit"],
    ]
 }
 
