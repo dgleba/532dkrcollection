@@ -9,17 +9,6 @@ from rest_framework.permissions import IsAuthenticated
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-from __future__ import absolute_import
-
-from django.http import HttpResponse
-from django.views.generic.edit import UpdateView, DeleteView, CreateView
-
-from rules.contrib.views import permission_required, objectgetter
-from rules.contrib.views import LoginRequiredMixin, PermissionRequiredMixin
-
-# from .models import Book
-
-
 class PostListView(generic.ListView):
     model = models.Post
     form_class = forms.PostForm

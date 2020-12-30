@@ -2,4 +2,3 @@ Django>=2,<3
 django-extensions
 djangorestframework
 djangorestframework_simplejwt
-rules
