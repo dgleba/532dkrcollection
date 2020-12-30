@@ -10,3 +10,6 @@ try flask appbuilder
 
 _____________
 
+
+see 
+sftp://192.168.88.60/srv/dkr/532dkrcollection/549-flasks/549-a-flask-appbuilder-yard/549a-fab/_status.txt
