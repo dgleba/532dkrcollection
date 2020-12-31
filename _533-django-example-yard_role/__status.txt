@@ -1,12 +1,21 @@
 
+2020-12-31
+
 status:  
 
-
+built in roles work with html view. drf needs different implementation.
 
 
 goal:
 
-add dgleba custom roles to example app.
+use builtin roles permissions
+
+
+was
+    add dgleba custom roles to example app.
+    I put this on hold for now.
+    2020-12-31
+
 
 _____________
 
@@ -17,6 +26,9 @@ mangosite/proj generated from https://djangobuilder.io/?#/project/Fz0lGMqktuS2pT
 
 _____________
 
+
+
+unfinished - on hold.
 
 
 2020-12-30_Wed_am
