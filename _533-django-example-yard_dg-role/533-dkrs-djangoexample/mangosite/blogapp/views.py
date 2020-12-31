@@ -25,8 +25,8 @@ class PostDetailView(generic.DetailView):
 
 
 class PostUpdateView(LoginRequiredMixin,PermissionRequiredMixin,generic.UpdateView):
-    permission_classes = (IsAuthenticated,)
     permission_required = ('blogapp.change_post',  )
+    permission_classes = (IsAuthenticated,)
     model = models.Post
     form_class = forms.PostForm
     pk_url_kwarg = "pk"
