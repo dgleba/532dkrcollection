@@ -19,6 +19,20 @@ was
 
 _____________
 
+
+todo:
+    - add django built-in permissions to drf
+    - add search. maybe django-filter
+    - add pagination. maybe drf built-in
+    
+
+
+
+
+=================================================
+
+_____________
+
 detail.
 
 mangosite/proj generated from https://djangobuilder.io/?#/project/Fz0lGMqktuS2pTkvWvjJ
