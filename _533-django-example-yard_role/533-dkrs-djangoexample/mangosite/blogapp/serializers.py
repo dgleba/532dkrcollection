@@ -8,6 +8,7 @@ class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Post
         fields = [
+            "id",
             "created",
             "last_updated",
             "title",

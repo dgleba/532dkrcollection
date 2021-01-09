@@ -6,7 +6,7 @@ from flask_appbuilder.models.group import aggregate_count
 from flask_appbuilder.models.sqla.interface import SQLAInterface
 
 from . import appbuilder, db
-from .models import Contact, ContactGroup, Gender, Pfeature
+from .models import Contact, ContactGroup, Gender, Pfeature, Post
 
 
 def fill_gender():
@@ -136,3 +136,17 @@ appbuilder.add_view(
     icon="fa-dashboard",
     category="Contacts",
 )
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+class PostView(ModelView):
+    datamodel = SQLAInterface(Post)
+    add_columns = ['title', 'body', 'active_status']
+
+appbuilder.add_view(
+    PostView, "Post", icon="fa-envelope", category="Post"
+)
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+

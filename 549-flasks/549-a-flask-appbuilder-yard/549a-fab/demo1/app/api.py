@@ -5,7 +5,7 @@ from flask_appbuilder.models.filters import BaseFilter
 from sqlalchemy import or_
 
 from . import appbuilder, db
-from .models import Contact, ContactGroup, Gender
+from .models import Contact, ContactGroup, Gender, Post
 # ModelOMParent
 
 
@@ -91,8 +91,19 @@ class GroupModelApi(ModelRestApi):
     datamodel = SQLAInterface(ContactGroup)
     allow_browser_login = True
 
-
 appbuilder.add_api(GroupModelApi)
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+class PostModelApi(ModelRestApi):
+    resource_name = "posts"
+    datamodel = SQLAInterface(Post)
+    allow_browser_login = True
+
+appbuilder.add_api(PostModelApi)
+
 
 
 # class ModelOMParentApi(ModelRestApi):

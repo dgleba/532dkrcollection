@@ -36,6 +36,17 @@ class Pfeature(Model):
     def __repr__(self):
         return self.name
 
+class Post(Model):
+    id = Column(Integer, primary_key=True)
+    title = Column(String(250),  nullable=True)
+    body = Column(String(14250),  nullable=True)
+    active_status = Column(Integer,  nullable=True)
+    created_at = Column(DateTime(timezone=True), default=func.now())
+    updated_at = Column(DateTime(timezone=True), onupdate=func.now())
+
+    def __repr__(self):
+        return self.title
+
 
 class Contact(Model):
     id = Column(Integer, primary_key=True)

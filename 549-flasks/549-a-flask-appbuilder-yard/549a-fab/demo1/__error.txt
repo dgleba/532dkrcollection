@@ -1,0 +1,121 @@
+
+
+flask-jwt-extended 3.25.0 requires PyJWT<2.0,>=1.6.4, but you'll have pyjwt 2.0.0 which is incompatible.
+
+
+=================================================
+
+flaskdev_1  | Traceback (most recent call last):
+flaskdev_1  |   File "/usr/local/bin/flask", line 8, in <module>
+flaskdev_1  |     sys.exit(main())
+flaskdev_1  |   File "/usr/local/lib/python3.7/site-packages/flask/cli.py", line 967, in main
+flaskdev_1  |     cli.main(args=sys.argv[1:], prog_name="python -m flask" if as_module else None)
+flaskdev_1  |   File "/usr/local/lib/python3.7/site-packages/flask/cli.py", line 586, in main
+flaskdev_1  |     return super(FlaskGroup, self).main(*args, **kwargs)
+flaskdev_1  |   File "/usr/local/lib/python3.7/site-packages/click/core.py", line 782, in main
+flaskdev_1  |     rv = self.invoke(ctx)
+flaskdev_1  |   File "/usr/local/lib/python3.7/site-packages/click/core.py", line 1254, in invoke
+flaskdev_1  |     cmd_name, cmd, args = self.resolve_command(ctx, args)
+flaskdev_1  |   File "/usr/local/lib/python3.7/site-packages/click/core.py", line 1297, in resolve_command
+flaskdev_1  |     cmd = self.get_command(ctx, cmd_name)
+flaskdev_1  |   File "/usr/local/lib/python3.7/site-packages/flask/cli.py", line 527, in get_command
+flaskdev_1  |     self._load_plugin_commands()
+flaskdev_1  |   File "/usr/local/lib/python3.7/site-packages/flask/cli.py", line 523, in _load_plugin_commands
+flaskdev_1  |     self.add_command(ep.load(), ep.name)
+flaskdev_1  |   File "/usr/local/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2446, in load
+flaskdev_1  |     self.require(*args, **kwargs)
+flaskdev_1  |   File "/usr/local/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2469, in require
+flaskdev_1  |     items = working_set.resolve(reqs, env, installer, extras=self.extras)
+flaskdev_1  |   File "/usr/local/lib/python3.7/site-packages/pkg_resources/__init__.py", line 775, in resolve
+flaskdev_1  |     raise VersionConflict(dist, req).with_context(dependent_req)
+flaskdev_1  | pkg_resources.ContextualVersionConflict: (PyJWT 2.0.0 (/usr/local/lib/python3.7/site-packages), Requirement.parse('PyJWT<2.0,>=1.6.4'), {'Flask-JWT-Extended'})
+549a-fab_flaskdev_1 exited with code 1
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping 549a-fab_flaskdev_1   ... done
+Stopping 549a-fab_adminerd_1   ... done
+
+=================================================
+
+
+flaskdev_1  | Traceback (most recent call last):
+flaskdev_1  |   File "/usr/local/bin/flask", line 8, in <module>
+flaskdev_1  |     sys.exit(main())
+flaskdev_1  |   File "/usr/local/lib/python3.7/site-packages/flask/cli.py", line 967, in main
+flaskdev_1  |     cli.main(args=sys.argv[1:], prog_name="python -m flask" if as_module else None)
+flaskdev_1  |   File "/usr/local/lib/python3.7/site-packages/flask/cli.py", line 586, in main
+flaskdev_1  |     return super(FlaskGroup, self).main(*args, **kwargs)
+flaskdev_1  |   File "/usr/local/lib/python3.7/site-packages/click/core.py", line 782, in main
+flaskdev_1  |     rv = self.invoke(ctx)
+flaskdev_1  |   File "/usr/local/lib/python3.7/site-packages/click/core.py", line 1254, in invoke
+flaskdev_1  |     cmd_name, cmd, args = self.resolve_command(ctx, args)
+flaskdev_1  |   File "/usr/local/lib/python3.7/site-packages/click/core.py", line 1297, in resolve_command
+flaskdev_1  |     cmd = self.get_command(ctx, cmd_name)
+flaskdev_1  |   File "/usr/local/lib/python3.7/site-packages/flask/cli.py", line 527, in get_command
+flaskdev_1  |     self._load_plugin_commands()
+flaskdev_1  |   File "/usr/local/lib/python3.7/site-packages/flask/cli.py", line 523, in _load_plugin_commands
+flaskdev_1  |     self.add_command(ep.load(), ep.name)
+flaskdev_1  |   File "/usr/local/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2446, in load
+flaskdev_1  |     self.require(*args, **kwargs)
+flaskdev_1  |   File "/usr/local/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2469, in require
+flaskdev_1  |     items = working_set.resolve(reqs, env, installer, extras=self.extras)
+flaskdev_1  |   File "/usr/local/lib/python3.7/site-packages/pkg_resources/__init__.py", line 775, in resolve
+flaskdev_1  |     raise VersionConflict(dist, req).with_context(dependent_req)
+flaskdev_1  | pkg_resources.ContextualVersionConflict: (PyJWT 2.0.0 (/usr/local/lib/python3.7/site-packages), Requirement.parse('PyJWT<2.0,>=1.6.4'), {'Flask-JWT-Extended'})
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping 549a-fab_adminerd_1 ... done
+Stopping 549a-fab_flaskdev_1 ... done
+albe@vamp398:/srv/dkr/532dkrcollection/549-flasks/549-a-flask-appbuilder-yard/549a-fab$
+
+
+=================================================
+
+Successfully built sqlalchemy-utils Flask-JWT-Extended Flask-OpenID Flask-Login PyYAML pyrsistent
+Installing collected packages: marshmallow, Six, python-dateutil, PyYAML, apispec, typing-extensions, zipp, importlib-metadata, pyrsistent, attrs, jsonschema, marshmallow-enum, pytz, Babel, MarkupSafe, Jinja2, click, itsdangerous, Werkzeug, Flask, Flask-Babel, SQLAlchemy, marshmallow-sqlalchemy, sqlalchemy-utils, PyJWT, Flask-JWT-Extended, dnspython, idna, email-validator, defusedxml, python3-openid, Flask-OpenID, WTForms, Flask-WTF, prison, colorama, Flask-Login, Flask-SQLAlchemy, flask-appbuilder, flask-cors
+ERROR: After October 2020 you may experience errors when installing or updating packages. This is because pip will change the way that it resolves dependency conflicts.
+
+We recommend you use --use-feature=2020-resolver to test your packages with the new resolver before it becomes the default.
+
+flask-jwt-extended 3.25.0 requires PyJWT<2.0,>=1.6.4, but you'll have pyjwt 2.0.0 which is incompatible.
+Successfully installed Babel-2.9.0 Flask-1.1.2 Flask-Babel-1.0.0 Flask-JWT-Extended-3.25.0 Flask-Login-0.4.1 Flask-OpenID-1.2.5 Flask-SQLAlchemy-2.4.4 Flask-WTF-0.14.3 Jinja2-2.11.2 MarkupSafe-1.1.1 PyJWT-2.0.0 PyYAML-5.3.1 SQLAlchemy-1.3.22 Six-1.15.0 WTForms-2.3.3 Werkzeug-1.0.1 apispec-3.3.2 attrs-20.3.0 click-7.1.2 colorama-0.4.4 defusedxml-0.6.0 dnspython-2.1.0 email-validator-1.1.2 flask-appbuilder-3.1.1 flask-cors-3.0.10 idna-3.1 importlib-metadata-3.3.0 itsdangerous-1.1.0 jsonschema-3.2.0 marshmallow-3.10.0 marshmallow-enum-1.5.1 marshmallow-sqlalchemy-0.23.1 prison-0.1.3 pyrsistent-0.17.3 python-dateutil-2.8.1 python3-openid-3.2.0 pytz-2020.5 sqlalchemy-utils-0.36.8 typing-extensions-3.7.4.3 zipp-3.4.0
+WARNING: You are using pip version 20.2.4; however, version 20.3.3 is available.
+You should consider upgrading via the '/usr/local/bin/python -m pip install --upgrade pip' command.
+Removing intermediate container 511c3dbc4048
+ ---> f225e1081ed2
+
+Successfully built f225e1081ed2
+Successfully tagged 549a-fab_flaskdev:latest
+Building adminerd
+Step 1/4 : FROM php:5-alpine
+ ---> 5dd6b6ea6003
+Step 2/4 : RUN apk --update add php5-sqlite3
+ ---> Using cache
+ ---> 05cb3fc878dc
+Step 3/4 : WORKDIR /var/www/html
+ ---> Using cache
+ ---> 764ea5ba8e3c
+Step 4/4 : CMD php -S 0.0.0.0:80
+ ---> Using cache
+ ---> cbaa6be7dbcd
+
+Successfully built cbaa6be7dbcd
+Successfully tagged 549a-fab_adminerd:latest
+albe@vamp398:/srv/dkr/532dkrcollection/549-flasks/549-a-flask-appbuilder-yard/549a-fab$
+
+_____________
+
+
+
+ERROR: After October 2020 you may experience errors when installing or updating packages. This is because pip will change the way that it resolves dependency conflicts.
+We recommend you use --use-feature=2020-resolver to test your packages with the new resolver before it becomes the default.
+flask-jwt-extended 3.25.0 requires PyJWT<2.0,>=1.6.4, but you'll have pyjwt 2.0.0 which is incompatible.
+
+
+Execute these commands: python -m pip install --upgrade pip, pip check and finally install your package using 
+pip install <PACKAGE> --use-feature=2020-resolver. 
+This will install the correct versions for the dependencies. – arun Aug 31 '20 at 18:41
+
+pip install flask-jwt-extended --use-feature=2020-resolver 
+
+
+=================================================
+

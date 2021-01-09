@@ -41,3 +41,9 @@ to run:
     dc up
 
 
+
+upgrade pip due to error:
+
+
+dc run --rm flaskdev bash -c 'pip install --upgrade setuptools pip'
+

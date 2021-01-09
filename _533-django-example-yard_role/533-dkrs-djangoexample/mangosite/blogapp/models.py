@@ -8,7 +8,7 @@ class Post(models.Model):
     created = models.DateTimeField(auto_now_add=True, editable=False)
     last_updated = models.DateTimeField(auto_now=True, editable=False)
     title = models.CharField(max_length=230)
-    body = models.TextField(max_length=32100)
+    body = models.TextField(max_length=32100, default=None, blank=True, null=True)
 
     class Meta:
         pass
