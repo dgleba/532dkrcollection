@@ -101,6 +101,7 @@ class PostModelApi(ModelRestApi):
     resource_name = "posts"
     datamodel = SQLAInterface(Post)
     allow_browser_login = True
+    show_columns = ['id','title', 'body', 'created_at', 'updated_at']
 
 appbuilder.add_api(PostModelApi)
 
