@@ -101,7 +101,11 @@ class PostModelApi(ModelRestApi):
     resource_name = "posts"
     datamodel = SQLAInterface(Post)
     allow_browser_login = True
-    show_columns = ['id','title', 'body', 'created_at', 'updated_at']
+    add_columns =  [ 'title', 'body', 'created_at', 'updated_at', ]
+    edit_columns = [ 'title', 'body', 'created_at', 'updated_at', ]
+    show_columns = [ 'id', 'title', 'body', 'created_at', 'updated_at', ]
+    # add id to list columns to have id in the result json dgleba 2021-01-11
+    list_columns = [ 'id', 'title', 'body', 'created_at', 'updated_at', ]
 
 appbuilder.add_api(PostModelApi)
 
