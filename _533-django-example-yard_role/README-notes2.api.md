@@ -75,6 +75,14 @@ http http://192.168.88.60:6461/blogapp/hello/ "Authorization: Bearer eyJ0eXAiOiJ
 
 _____________
 
+
+web ui for api.
+
+http://192.168.88.60:6461/blogapp/api/v1/Post/ 
+
+
+
+
 works.
 
 http http://192.168.88.60:6461/blogapp/api/v1/Post/ "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA3ODc5MjU3LCJqdGkiOiIwMTc5MGRjMTBmZGU0ZTdlYTU2ZTY1MmFlNWVmOTJlNCIsInVzZXJfaWQiOjN9.d31ALRmsgIDCBc0RYzTnJGE6eXonSU45Jpsz3QfKK2o"
@@ -105,6 +113,30 @@ X-Frame-Options: SAMEORIGIN
     }
 ]
 
+
+=================================================
+
+put works with id in json.
+
+
+2021-01-10_Sun_18.30-PM
+
+Api Root Post List Post Instance
+Post Instance
+ViewSet for the Post class
+
+PUT /blogapp/api/v1/Post/3/
+HTTP 200 OK
+Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+{
+    "id": 3,
+    "created": "2020-12-13T17:18:12.369173Z",
+    "last_updated": "2021-01-10T23:29:00.577141Z",
+    "title": "Authentication in a Nuxt.js App ammezie c",
+    "body": "wewe2 b"
+}
 
 
 =================================================
