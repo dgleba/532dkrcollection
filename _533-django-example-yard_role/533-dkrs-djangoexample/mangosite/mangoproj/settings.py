@@ -97,11 +97,33 @@ DATABASES = {
 }
 
 REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+        "rest_framework.permissions.DjangoModelPermissions",
+    ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 2
 }
+
+# see api.py for more info.
+
+# https://www.django-rest-framework.org/api-guide/pagination/
+
+# https://levelup.gitconnected.com/django-user-groups-with-django-rest-framework-f6f2bab43499
+# REST_FRAMEWORK = {
+#     "DEFAULT_AUTHENTICATION_CLASSES": [
+#         "rest_framework.authentication.TokenAuthentication",
+#         "rest_framework.authentication.SessionAuthentication",
+#     ],
+#     "DEFAULT_PERMISSION_CLASSES": [
+#         "rest_framework.permissions.IsAuthenticated",
+#         "rest_framework.permissions.DjangoModelPermissions",
+#     ],
+# }
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=1500),
