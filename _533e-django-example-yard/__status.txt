@@ -1,9 +1,17 @@
 
-2020-12-31
+2020-12-31 -- 2021-01-16
+
+
 
 status:  
 
-built in roles work with html view. drf needs different implementation.
+works.
+built in roles work with html view. drf used builtin djangoModelPermissions.
+
+
+    https://github.com/dgleba/532dkrcollection/tree/master/_533e-django-example-yard
+
+
 
 
 goal:
@@ -11,19 +19,16 @@ goal:
 use builtin roles permissions
 
 
-was
-    add dgleba custom roles to example app.
-    I put this on hold for now.
-    2020-12-31
+
 
 
 _____________
 
 
-todo:
+done:
     - add django built-in permissions to drf
-    - add search. maybe django-filter
-    - add pagination. maybe drf built-in
+    - add search. django ones I think -- builtin.
+    - add pagination.  drf built-in
     
 
 
@@ -35,8 +40,8 @@ _____________
 
 detail.
 
-mangosite/proj generated from https://djangobuilder.io/?#/project/Fz0lGMqktuS2pTkvWvjJ
-
+mangoproj/mangoproj generated from https://djangobuilder.io/?#/project/Fz0lGMqktuS2pTkvWvjJ
+ - renamed to mangosite/mangoproj
 
 _____________
 
@@ -49,9 +54,7 @@ unfinished - on hold.
 
 RBAC simple
 
-
-
-dg_role_ability
+Gleba custom. dg_role_ability
 
 
 Link to spreadsheet indicating roles:
