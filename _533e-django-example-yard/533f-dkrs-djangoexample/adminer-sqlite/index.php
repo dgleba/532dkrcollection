@@ -18,7 +18,10 @@ function adminer_object() {
             <th>
               <?php echo lang('Password'); ?>
             <td>
-              <input type="password" name="auth[password]" value="<?php echo getenv('DB_PASS');  ?>"
+              <!-- this will supply the correct password for the user -->
+                <input type="password" name="auth[password]" value="<?php echo getenv('DB_PASS');  ?>">
+              <!-- This will require the user to input the correct password... -->
+              <!-- <input type="password" name="auth[password]" value=""> -->
           <tr>
             <th>
               <?php echo lang('Database'); ?>
