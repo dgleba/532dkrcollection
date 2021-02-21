@@ -6,7 +6,7 @@
 status:  
 
 works.
-built in roles work with html view. drf used builtin djangoModelPermissions.
+built in roles work with html view, and drf also uses these builtin djangoModelPermissions.
 
 
     https://github.com/dgleba/532dkrcollection/tree/master/_533e-django-example-yard
@@ -50,17 +50,17 @@ _____________
 unfinished - on hold.
 
 
-2020-12-30_Wed_am
+    2020-12-30_Wed_am
 
-RBAC simple
+    RBAC simple
 
-Gleba custom. dg_role_ability
+    Gleba custom. dg_role_ability
 
 
-Link to spreadsheet indicating roles:
-https://docs.google.com/spreadsheets/d/1h_JcMPiqUf-CSU_WShsOsS4NSQu3pichzl8hwxnGz0s/edit?usp=sharing
+    Link to spreadsheet indicating roles:
+    https://docs.google.com/spreadsheets/d/1h_JcMPiqUf-CSU_WShsOsS4NSQu3pichzl8hwxnGz0s/edit?usp=sharing
 
-copy of it..
+    copy of it..
 
 
 _____________
