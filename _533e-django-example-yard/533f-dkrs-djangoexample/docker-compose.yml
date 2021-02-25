@@ -1,7 +1,7 @@
 version: "3.6"
 services:
   djdev:
-    build: ./mangosite
+    build: ./djangosite
     restart: on-failure
     working_dir: /code
     # set user to root, group to www-data. All files should be delete-able by www-data group.
@@ -11,7 +11,7 @@ services:
       - ./.env
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - ./mangosite:/code
+      - ./djangosite:/code
       # use pip cache to reduce startup time..
       # https://stackoverflow.com/questions/25305788/how-to-avoid-reinstalling-packages-when-building-docker-image-for-python-project
       - ~/sysdata/python-dot-cache/pip/:/root/.cache/pip
@@ -31,7 +31,7 @@ services:
       - 14123:80
       # 8080 for regular adminer, 80 for dockette
     volumes:
-      - ./mangosite/db.sqlite3:/db.sq3
+      - ./djangosite/db.sqlite3:/db.sq3
       - ./adminer-sqlite:/var/www/html
     environment:
       - ADMINER_DEFAULT_SERVER=srvr

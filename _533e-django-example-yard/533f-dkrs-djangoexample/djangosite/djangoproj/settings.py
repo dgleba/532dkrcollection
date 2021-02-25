@@ -1,5 +1,5 @@
 """
-Django settings for mangoproj project.
+Django settings for djangoproj project.
 
 For more information on this file, see
 https://docs.djangoproject.com/
@@ -65,7 +65,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://192.168.88.60:8081",
 ]
 
-ROOT_URLCONF = 'mangoproj.urls'
+ROOT_URLCONF = 'djangoproj.urls'
 
 TEMPLATES = [
     {
@@ -83,7 +83,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'mangoproj.wsgi.application'
+WSGI_APPLICATION = 'djangoproj.wsgi.application'
 
 
 # Database
