@@ -2,7 +2,7 @@ version: "3.6"
 
 services:
   djprod:
-    build: .
+    build: ./djangosite
     restart: on-failure
     env_file:
       - ./.env
@@ -15,7 +15,7 @@ services:
     # set user to root, group to www-data. All files should be delete-able by www-data group.
     user: "0:33"
     volumes:
-      - .:/code
+      - ./djangosite:/code
       #- ./mediafiles:/code/media
       # use pip cache to reduce startup time..
       # https://stackoverflow.com/questions/25305788/how-to-avoid-reinstalling-packages-when-building-docker-image-for-python-project
@@ -28,7 +28,7 @@ services:
     restart: always
     working_dir: /code
     volumes:
-      - .:/code
+      - ./djangosite:/code
       - ./nginx/conf.d:/etc/nginx/conf.d
       #- ./static:/code/static
       #- ./mediafiles:/code/media
@@ -51,12 +51,12 @@ services:
       #  use PWD in mysql files volume so each project folder has it's own database folder. This is for mistake proofing. https://github.com/docker/compose/issues/2636
       #  I tried directory with no full path.. ERROR: Invalid interpolation format for "volumes" option in service "db": "../datasys/mysql-${PWD##*/}:/var/lib/mysql/"
       # - ../datasys/mysql${PWD}:/var/lib/mysql/ # folder for mysql's internal data files.
-      # - mysqldata:/var/lib/mysql
-      - ../sysdata/mysqldata:/var/lib/mysql
+      - mysqldata:/var/lib/mysql
+      # - ../sysdata/mysqldata:/var/lib/mysql
       # folder for scripts, etc.
       - ./script:/script 
       # folder for exported data, etc.
-      - ../data/home:/home 
+      - ../data/dbhome:/home 
     #
     # https://medium.freecodecamp.org/how-to-setup-log-rotation-for-a-docker-container-a508093912b2
     logging:

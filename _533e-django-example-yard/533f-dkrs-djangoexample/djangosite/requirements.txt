@@ -6,3 +6,4 @@ djangorestframework_simplejwt
 django-cors-headers
 #django-crontab
 apscheduler
+gunicorn
