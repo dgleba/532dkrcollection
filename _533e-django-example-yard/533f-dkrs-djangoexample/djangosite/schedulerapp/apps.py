@@ -10,13 +10,14 @@ class SchedulerappConfig(AppConfig):
     name = 'schedulerapp'
     # verbose_name = "Periodic-Schedule-App"
 
+    print("start01")
 
     def ready(self):
         
         def myjob01():
-            print(datetime.now(),' hello v10 from schedulerapp')
+            print(datetime.now(),' hello v14 from schedulerapp')
             f = open("/data/schedulerapp-output01.txt", "a")
-            f.write(str(datetime.now()) + " myjob01 v10 has run!\n")
+            f.write(str(datetime.now()) + " myjob01 v14 has run!\n")
             f.close()
 
         # startup code here
@@ -36,10 +37,16 @@ class SchedulerappConfig(AppConfig):
 
         scheduler = BackgroundScheduler(job_defaults={'misfire_grace_time': 1}, )
         # scheduler.shutdown(wait=False)  
+
+        #
+        # comment this out so it will not start. 2021-02-25_Thu_12.07-PM
+        #
         scheduler.start()
 
+
         scheduler.print_jobs()
-        s1 = scheduler.add_job(myjob01, 'interval', seconds=10, id='myjob01_id', replace_existing=True )
+
+        s1 = scheduler.add_job(myjob01, 'interval', hours=1, id='myjob01_id', replace_existing=True )
 
         # =================================================
 
