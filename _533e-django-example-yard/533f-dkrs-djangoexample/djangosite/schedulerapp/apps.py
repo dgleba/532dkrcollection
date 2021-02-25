@@ -30,8 +30,8 @@ class SchedulerappConfig(AppConfig):
         # https://stackoverflow.com/questions/6791911/execute-code-when-django-starts-once-only
         # https://apscheduler.readthedocs.io/en/stable/userguide.html
         #
-        #  to avoid running apscheduler twice.. --noreload - https://stackoverflow.com/questions/33814615/how-to-avoid-appconfig-ready-method-running-twice-in-django
-        command: python manage.py runserver 0.0.0.0:8000 --noreload
+        # to avoid running apscheduler twice.. --noreload - https://stackoverflow.com/questions/33814615/how-to-avoid-appconfig-ready-method-running-twice-in-django
+        # command: python manage.py runserver 0.0.0.0:8000 --noreload
         #
 
         import logging
