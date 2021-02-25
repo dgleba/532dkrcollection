@@ -34,12 +34,12 @@ class SchedulerappConfig(AppConfig):
         logging.basicConfig()
         logging.getLogger('apscheduler').setLevel(logging.DEBUG)
 
-        scheduler = BackgroundScheduler()
+        scheduler = BackgroundScheduler(job_defaults={'misfire_grace_time': 1}, )
         # scheduler.shutdown(wait=False)  
         scheduler.start()
 
         scheduler.print_jobs()
-        s1 = scheduler.add_job(myjob01, 'interval', seconds=10, id='myjob01_id', )
+        s1 = scheduler.add_job(myjob01, 'interval', seconds=10, id='myjob01_id', replace_existing=True )
 
         # =================================================
 

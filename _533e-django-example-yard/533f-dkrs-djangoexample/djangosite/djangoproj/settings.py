@@ -41,12 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
-    'apscheduler',
     'blogapp',
     'schedulerapp',
 ]
 
 # not used..
+    # 'apscheduler',
     # 'django_crontab',
 
 MIDDLEWARE = [

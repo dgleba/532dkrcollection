@@ -1,0 +1,7 @@
+
+2021-02-25:
+
+problem: Jobs are running twice.
+
+https://github.com/agronholm/apscheduler/issues/492
+
