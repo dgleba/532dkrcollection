@@ -9,9 +9,12 @@ services:
     user: "0:33"
     env_file:
       - ./.env
+    entrypoint: /code/entrypoint.sh  
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
+      - /etc/localtime:/etc/localtime:ro
       - ./djangosite:/code
+      - ../data/djangosite:/data
       # use pip cache to reduce startup time..
       # https://stackoverflow.com/questions/25305788/how-to-avoid-reinstalling-packages-when-building-docker-image-for-python-project
       - ~/sysdata/python-dot-cache/pip/:/root/.cache/pip
@@ -19,7 +22,10 @@ services:
       - "6461:8000"
     networks:
       - 499d-django_default      
-  
+
+
+
+
   adminerd:
     # 10.4.1.231:6117/
     # image: adminer:4.7

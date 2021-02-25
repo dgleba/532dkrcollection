@@ -6,11 +6,14 @@
 # I can't seem to get writable group permissions 2018-08-27_Mon_21.28-PM
 #
 
+cronad:
+	docker-compose    run --rm djdev   python manage.py crontab add
+
   
 perm:
 # fix permissions. make them group writable so www-data group can manage the files. move, delete, etc..  
 	# docker-compose run --rm djan sh -c 'su root;chmod -R g+w .;exit;exit'
-	docker-compose run --rm djdev sh -c 'chgrp -R www-data . &&  chmod -R g+w . '
+	docker-compose run --rm djdev sh -c 'chgrp -R www-data . &&  chmod -R g+w . && chmod +x *.sh && chmod -R 777 /data'
 
 
 # shell in django

@@ -45,6 +45,7 @@ These have already been run against this project..
   docker-compose run --rm djdev python manage.py startapp polls
   
   docker-compose run --rm djdev python manage.py startapp blog
+  docker-compose run --rm djdev python manage.py startapp schedulerapp
   
   # This can work with sqlite in development. See production below for use with mysql.
 

@@ -7,6 +7,9 @@ RUN  chmod -R g+rws  /code
 # RUN  chown -R "0:33"  /rootzzz
 # USER "0:33"
 
+# Install cron
+RUN apt-get update && apt-get install -y cron 
+
 ADD requirements.txt /code/
 RUN pip install  -r requirements.txt
 

@@ -20,6 +20,7 @@ _533e-django-example-yard/533f-dkrs-djangoexample/adminer-sqlite/index.php
 _533e-django-example-yard/533f-dkrs-djangoexample/adminer-sqlite/Dockerfile
 _533e-django-example-yard/533f-dkrs-djangoexample/adminer-sqlite/README.md
 _533e-django-example-yard/533f-dkrs-djangoexample/.env
+_533e-django-example-yard/533f-dkrs-djangoexample/docker-compose.prod.yml
 _533e-django-example-yard/533f-dkrs-djangoexample/djangosite/templates/base.html
 _533e-django-example-yard/533f-dkrs-djangoexample/djangosite/templates/registration/login.html
 _533e-django-example-yard/533f-dkrs-djangoexample/djangosite/templates/registration/password_reset_form.html

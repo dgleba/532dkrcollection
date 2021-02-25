@@ -1,7 +1,6 @@
 from django.db import models
 from django.urls import reverse
 
-
 class Post(models.Model):
 
     # Fields
@@ -21,3 +20,5 @@ class Post(models.Model):
 
     def get_update_url(self):
         return reverse("blogapp_Post_update", args=(self.pk,))
+
+

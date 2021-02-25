@@ -41,8 +41,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
+    'apscheduler',
     'blogapp',
+    'schedulerapp',
 ]
+
+# not used..
+    # 'django_crontab',
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -172,6 +177,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# django-crontab is installed, but not being used. linux cron not fully setup. 
+# CRONJOBS = [
+#     ('* * * * *', 'blogapp.cron.scheduled_job0')
+# ]
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/

@@ -3,3 +3,5 @@ django-extensions
 djangorestframework
 djangorestframework_simplejwt
 django-cors-headers
+#django-crontab
+apscheduler
