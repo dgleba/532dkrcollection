@@ -28,6 +28,9 @@ prb:
 prup:
 	docker-compose  -f docker-compose.prod.yml  up
 
+prst:
+	docker-compose  -f docker-compose.prod.yml  down
+
 
 umasktest:
 	docker-compose  -f docker-compose.devtest.yml  run djangodev  django-admin.py startproject myproject .

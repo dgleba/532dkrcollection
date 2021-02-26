@@ -5,6 +5,9 @@
 staticfiles/
 mediafiles/
 postgres/data/
+sysdata/
+datasys/
+data/
 
 #*.sqlite3
 

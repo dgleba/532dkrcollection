@@ -10,14 +10,14 @@ class SchedulerappConfig(AppConfig):
     name = 'schedulerapp'
     # verbose_name = "Periodic-Schedule-App"
 
-    print("start01")
+    print("starting schedulerapp apps.py appconfig")
 
     def ready(self):
         
         def myjob01():
-            print(datetime.now(),' hello v14 from schedulerapp')
+            print(datetime.now(),' hello v17 from schedulerapp')
             f = open("/data/schedulerapp-output01.txt", "a")
-            f.write(str(datetime.now()) + " myjob01 v14 has run!\n")
+            f.write(str(datetime.now()) + " myjob01 v17 has run!\n")
             f.close()
 
         # startup code here
@@ -50,7 +50,7 @@ class SchedulerappConfig(AppConfig):
 
         scheduler.print_jobs()
 
-        s1 = scheduler.add_job(myjob01, 'interval', hours=1, id='myjob01_id', replace_existing=True )
+        s1 = scheduler.add_job(myjob01, 'interval', minutes=30, id='myjob01_id', replace_existing=True )
 
         # =================================================
 
