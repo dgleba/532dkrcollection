@@ -21,6 +21,8 @@ Then `533f-dkrs-djangoexample` could be renamed to `tags654b`. This would be a u
 
 4.
 
+old:
+
 `mangosite` was just the name I used this time. It could be changed to `djangosite/djangoproj`. 
 This would require renaming many items in the project files.
 You could use `docker-compose run --rm djdev django-admin.py startproject djangoproj .` to create an empty 
@@ -33,26 +35,48 @@ The idea behind the yard folder is that it has project code folders and a system
 
 The entire thing is packaged in the yard folder. 
 
-It makes it clear what files below to this project.
+It makes it clear what files belong to this project.
 
-It can be moved to another server.
+It can all be moved to another server.
 
 The project has no files in another place on this server. 
 
-The `sysdata` folder seperates system files from project code files while clearly keeping 
+The `sysdata` folder seperates system files from project code files and data files while clearly keeping 
 everything in one `yard` folder
 
-.
+
+_533e-django-example-yard
 ├── 533f-dkrs-djangoexample
 │   ├── adminer-sqlite       <--  a docker project folder
 │   ├── docker-compose.yml
+│   ├── djangosite            <--  a docker project folder for django
 │   ├── Makefile 
-│   ├── mangosite            <--  a docker project folder for django
-│   └── z-example-djangosite
 ├── _app_naming.txt
 ├── data
+│   ├── dbhome
 ├── README.md
 ├── __status.txt
 ├── sysdata             <--  a docker project folder - contains mysql system data files and other system files.
 │   ├── mysqldata 
+
+
+
+_____________
+
+
+For example:
+
+blog434a-yard
+├── blog434b
+│   ├── adminer-sqlite       <--  a docker project folder
+│   ├── docker-compose.yml
+│   ├── djangosite            <--  a docker project folder for django├── data
+├── README.md
+├── __status.txt
+├── sysdata
+
+
+I use  rupa/z to jump to folders. I name it 434b, so I can simply do:
+        z 34b
+    and it takes me to the blog434b folder because no other recently used folders are named like that.
 

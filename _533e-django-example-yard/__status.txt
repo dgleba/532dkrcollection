@@ -9,6 +9,7 @@ works.
 built in roles work with html view, and drf also uses these builtin djangoModelPermissions.
 
 
+This repo is:
     https://github.com/dgleba/532dkrcollection/tree/master/_533e-django-example-yard
 
 
