@@ -12,6 +12,13 @@ mmb:
 mig:
 	docker-compose run --rm djdev python manage.py migrate
 
+cs:
+	  docker-compose -f docker-compose.prod.yml run --rm  djprod python manage.py collectstatic --noinput
+
+
+
+
+
 cronad:
 	docker-compose    run --rm djdev   python manage.py crontab add
 
@@ -34,8 +41,15 @@ prb:
 prup:
 	docker-compose  -f docker-compose.prod.yml  up
 
+prupd:
+	docker-compose  -f docker-compose.prod.yml  up -d
+
 prst:
 	docker-compose  -f docker-compose.prod.yml  down
+
+prrs:
+	docker-compose  -f docker-compose.prod.yml  restart
+
 
 
 umasktest:

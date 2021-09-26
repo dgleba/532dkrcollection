@@ -2,6 +2,7 @@ version: "3.6"
 
 services:
   djprod:
+    # http://192.168.88.60:6464/adminb/blogapp/post/
     build: ./djangosite
     restart: on-failure
     env_file:
@@ -70,14 +71,15 @@ services:
       - 499d-django_default      
 
 
-  # adminer:
-  #   # 10.4.1.231:6117/  use db or 10.4.1.228:3308 for server while logging in.
-  #   image: adminer:4.7
-  #   restart: always
-  #   ports:
-  #     - 6463:8080
-  #   networks:
-  #     - 499d-django_default      
+  adminer:
+    # http://192.168.88.60:6463
+    # 10.4.1.231:6117/  use db or 10.4.1.228:3308 for server while logging in.
+    image: adminer:4.7
+    restart: always
+    ports:
+      - 6463:8080
+    networks:
+      - 499d-django_default      
 
 #
 #   depends_on:
