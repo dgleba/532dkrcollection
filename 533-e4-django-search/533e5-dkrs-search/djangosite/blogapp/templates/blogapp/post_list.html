@@ -1,0 +1,23 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+<form method='GET'>
+  <input type='text' name='q' value='{{ request.GET.q }}'>
+  <input class="button" type='submit' value="Search">
+</form>
+
+<!-- <div class="row-fluid">
+  <div class="span12">
+      <form class='form-inline' accept-charset='UTF-8' method='get' action=''>
+          <input type="text" size="40" name="q" value = "{{cl.params.q}}" id="searchbar" autofocus="">
+          <button type='submit' class="btn-default">Search</button>
+      </form>
+  </div>
+</div> -->
+
+{% for object in object_list %}
+  <div class="m-2"><a href="{{object.get_absolute_url}}">{{object}}</a></div>
+{% endfor %}
+<div><a class="btn btn-primary" href="{% url 'blogapp_Post_create' %}">Create a new Post</a></div>
+{% endblock %}

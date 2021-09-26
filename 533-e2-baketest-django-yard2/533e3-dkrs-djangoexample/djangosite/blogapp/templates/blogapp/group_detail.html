@@ -1,0 +1,14 @@
+{% extends "blogapp/group_base.html" %}
+
+{% block title %}
+    {{ group }}
+{% endblock %}
+
+{% block content %}
+    <h1><a href={% url "blogapp:group_list" %}>Group</a></h1>
+    <h2>{{ group }} | <a href={% url "blogapp:group_update" group.pk %}>Update</a> | 
+    <form style="display:inline;" action={% url "blogapp:group_delete" group.pk %} method="post" onsubmit="return confirm('Are you sure you want to delete {{ group }}?')">{% csrf_token %}
+    <input type="submit" value="Delete" />
+    </form>
+    </h2>
+{% endblock %}

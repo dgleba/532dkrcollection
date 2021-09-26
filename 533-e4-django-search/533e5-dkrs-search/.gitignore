@@ -1,0 +1,13 @@
+*.pyc
+.env
+.env.secret
+.vscode
+staticfiles/
+mediafiles/
+postgres/data/
+sysdata/
+datasys/
+data/
+
+#*.sqlite3
+

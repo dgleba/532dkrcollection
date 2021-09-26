@@ -1,0 +1,14 @@
+{% extends "blogapp/author_base.html" %}
+
+{% block title %}
+    {{ author }}
+{% endblock %}
+
+{% block content %}
+    <h1><a href={% url "blogapp:author_list" %}>Author</a></h1>
+    <h2>{{ author }} | <a href={% url "blogapp:author_update" author.pk %}>Update</a> | 
+    <form style="display:inline;" action={% url "blogapp:author_delete" author.pk %} method="post" onsubmit="return confirm('Are you sure you want to delete {{ author }}?')">{% csrf_token %}
+    <input type="submit" value="Delete" />
+    </form>
+    </h2>
+{% endblock %}
