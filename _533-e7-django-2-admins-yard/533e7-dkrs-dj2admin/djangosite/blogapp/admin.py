@@ -52,7 +52,7 @@ admin.site.register(models.Post, PostAdmin)
 
 
 class Admin2(admin.AdminSite):
-    site_header = "Admin2"
+    site_header = "App2"
     site_title = "Blog"
     index_title = "blog."
     
