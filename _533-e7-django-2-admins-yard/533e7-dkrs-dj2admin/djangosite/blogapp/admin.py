@@ -52,9 +52,12 @@ admin.site.register(models.Post, PostAdmin)
 
 
 class Admin2(admin.AdminSite):
-    site_header = "App2"
-    site_title = "Blog"
-    index_title = "blog."
+    site_header = "App.bg2"
+    site_title = "Blog-BG2"
+    # https://books.agiliq.com/projects/django-admin-cookbook/en/latest/change_text.html
+    # admin.site.site_header = "UMSRA Admin"
+    # admin.site.site_title = "UMSRA Admin Portal"
+    # admin.site.index_title = "Welcome to UMSRA Researcher Portal"
     
 class PostAdmin2(admin.ModelAdmin):
     actions = None
@@ -77,8 +80,9 @@ class PostAdmin2(admin.ModelAdmin):
 
 
 admin2 = Admin2(name='admin2')
-
 admin2.register(models.Post, PostAdmin2)
+# This seems like it is not working.
+admin2.index_title = "blog.bg2"
 
 
 # =================================================

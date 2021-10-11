@@ -31,7 +31,7 @@
     <div id="branding">
       {% block branding %}{% endblock %}
       <!-- David Gleba -->
-      <a href="/adminb/">Home</a>
+      <a href="/adminb/">BG2-Home</a>
     </div>
 
 
@@ -40,14 +40,14 @@
         <div id="user-tools">
 
           <!-- David Gleba -->
-          <a href="/adminb/">Home</a>
+          <a href="/adminb/">BG2-Home</a>
 
             {% block welcome-msg %}
-                {% translate 'Welcome,' %}
+                <!-- {% translate 'Welcome,' %} -->
                 <strong>{% firstof user.get_short_name user.get_username %}</strong>.
             {% endblock %}
             {% block userlinks %}
-                {% if site_url %}
+                {% if site_url%}
                     <a href="{{ site_url }}">{% translate 'View site' %}</a> /
                 {% endif %}
                 {% if user.is_active and user.is_staff %}
@@ -56,7 +56,7 @@
                         <a href="{{ docsroot }}">{% translate 'Documentation' %}</a> /
                     {% endif %}
                 {% endif %}
-                {% if user.has_usable_password %}
+                {% if user.has_usable_password__offlinedgleba %}
                 <a href="{% url 'admin:password_change' %}">{% translate 'Change password' %}</a> /
                 {% endif %}
                 <a href="{% url 'admin:logout' %}">{% translate 'Log out' %}</a>
@@ -71,7 +71,7 @@
     <!-- David Gleba -->
     {% block breadcrumbs %}
     <div class="breadcrumbs">
-    <a href="{% url 'admin:index' %}">{% translate 'Home' %}</a>
+    <a href="{% url 'admin:index' %}">{% translate 'BG2-Home' %}</a>
     {% if title %} &rsaquo; {{ title }}{% endif %}
     </div>
     {% endblock %}
